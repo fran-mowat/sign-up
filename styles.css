@@ -62,6 +62,7 @@ body #graphics-section, body #form-section{
 
 #form-section h1{
     text-align: center;
+    padding-top: 40px;
 }
 
 #form-section form{
@@ -107,11 +108,21 @@ body #graphics-section, body #form-section{
 
 #form-section button{
     background-color: var(--blue);
+    background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 1s, color 1s;
     margin: 25px;
     border-radius: 5px;
     border: solid var(--blue);
     color: var(--dark);
     padding: 8px 24px;
+    font-size: 16px;
+}
+
+#form-section button:hover{
+    background-position: left;
+    color: var(--blue);
 }
 
 #form-section #login-text p a{
