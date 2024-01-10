@@ -22,23 +22,23 @@
         <h1>Sign up below...</h1>
         <form action="post" method="">
             <div class="input-container">
-                <label for="first-name">First name</label>
-                <input type="text" id="first-name" name="first-name" pattern="[A-Za-z]+" minlength="2" maxlength="30" required autocomplete="given-name">
-                <p class="error-message"></p>
+                <label for="name">First name</label>
+                <input type="text" id="name" name="first-name" pattern="[A-Za-z]+" minlength="2" maxlength="30" required autocomplete="given-name">
+                <p class="error-message"> </p>
             </div>
             <div class="input-container">
                 <label for="surname">Surname</label>
                 <input type="text" id="surname" name="surname" pattern="[A-Za-z]+" minlength="2" maxlength="30" required autocomplete="family-name">
-                <p class="error-message"></p>
+                <p class="error-message"> </p>
             </div>
             <div class="input-container">
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" autocomplete="email">
+                <input type="email" id="email" name="email" autocomplete="email" required>
                 <p class="error-message"></p>
             </div>
             <div class="input-container">
                 <label for="phone">Phone number</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="\d{11}">
+                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="\d{11}" required>
                 <p class="error-message"></p>
             </div>
             <div class="input-container">
