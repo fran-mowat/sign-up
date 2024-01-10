@@ -1,0 +1,18 @@
+*{
+    font-family: "Heebo-Regular", "Ubuntu", "monospace";
+}
+
+@font-face {
+    font-family: "Heebo-Regular";
+    src: url("./static/Heebo-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Heebo-Light";
+    src: url("./static/Heebo-Light.ttf");
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./static/Ubuntu-Regular.ttf");
+}
