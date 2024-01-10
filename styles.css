@@ -24,7 +24,9 @@
     src: url("./static/Ubuntu-Regular.ttf");
 }
 
-body{
+/* INDEX.HTML STYLES */
+
+#index-body{
     display: grid;
     column-gap: 0px;
     grid-template-columns: 30vw 70vw;
@@ -33,7 +35,7 @@ body{
     margin: 0;
 }
 
-body #graphics-section, body #form-section{
+#index-body #graphics-section, #index-body #form-section{
     padding: 30px;
 }
 
@@ -125,4 +127,25 @@ body #graphics-section, body #form-section{
 
 #form-section #login-text p a{
     color: var(--blue);
+}
+
+/* SUCCESS.HTML STYLES */
+#success-body{
+    background-color: var(--dark);
+    background-image: url(./static/success-astronaut.svg), url(./static/blob.svg);
+    background-repeat: no-repeat;
+    background-size: 600px, cover;
+    background-position: right -10px bottom -20px, left 0px top 0px;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+#success-body #success-text{
+    padding: 100px 70px;
+}
+
+#success-body #success-text p{
+    color: var(--light);
+    font-size: 40px;
 }
