@@ -39,6 +39,25 @@ let checkPhoneValidity = (e) => {
     }
 }
 
+let checkPasswordValidity = (e) => {
+    let input = e.target; 
+    let errorMessage = input.nextElementSibling;
+
+    if (input.value.length < 8) {
+        errorMessage.textContent = "Your password must contain at least 8 characters.";
+        input.style.border = "1px solid #ff3f3f";
+    } else if (input.value.length == 0) {
+        errorMessage.textContent = "* This field is required.";
+        input.style.border = "1px solid #ff3f3f";
+    } else if (! input.checkValidity()){
+        errorMessage.textContent = "Please enter a valid password.";
+        input.style.border = "1px solid #ff3f3f";
+    } else {
+        errorMessage.textContent = "";
+        input.style.border = "1px solid #E5E7EB";
+    }
+}
+
 let firstName = document.getElementById("name");
 firstName.addEventListener("keyup", checkInputValidity);
 
@@ -50,3 +69,6 @@ email.addEventListener("keyup", checkInputValidity);
 
 let phone = document.getElementById("phone");
 phone.addEventListener("keyup", checkPhoneValidity);
+
+let password = document.getElementById("password");
+password.addEventListener("keyup", checkPasswordValidity);
