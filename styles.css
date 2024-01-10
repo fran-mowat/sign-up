@@ -6,6 +6,7 @@
     --blue: #22A7F0;
     --dark: #1D2228;
     --light: #F9F9F9;
+    --red: #ff3f3f;
 }
 
 @font-face {
@@ -69,7 +70,7 @@ body #graphics-section, body #form-section{
     display: grid;
     grid-template-columns: 50% 50%;
     row-gap: 20px;
-    width: 550px;
+    width: 650px;
     margin: auto;
 }
 
@@ -78,19 +79,15 @@ body #graphics-section, body #form-section{
 }
 
 #form-section form .input-container label{
-    font-size: 10px;
+    font-size: 15px;
     text-transform: uppercase;
 }
 
 #form-section form .input-container input{
     display: block;
-    width: 200px;
+    width: 250px;
     border-radius: 5px;
     border: 1px solid #E5E7EB;
-}
-
-#form-section form .input-container input:invalid{
-    border: 1px solid red;
 }
 
 #form-section form .input-container input:focus{
@@ -99,11 +96,12 @@ body #graphics-section, body #form-section{
 }
 
 #form-section form .input-container .error-message{
-    font-size: 10px;
+    font-size: 12px;
+    height: 15px;
 }
 
 #form-section form .input-container input:invalid+.error-message{
-    color: red;
+    color: var(--red);
 }
 
 #form-section button{
