@@ -20,7 +20,7 @@
 
     <div id="form-section">
         <h1>Sign up below...</h1>
-        <form action="post" method="">
+        <form action="post" method="" id="form">
             <div class="input-container">
                 <label for="name">First name</label>
                 <input type="text" id="name" name="first-name" pattern="[A-Za-z]+" minlength="2" maxlength="30" required autocomplete="given-name">
@@ -54,7 +54,7 @@
         </form>
 
         <div>
-            <button type="submit">Create Account</button>
+            <button type="submit" form="form">Create Account</button>
         </div>
 
         <div id="login-text">
