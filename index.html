@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./static/Ubuntu-Regular.ttf">
 </head>
 <body>
-    <img src="./static/confused-astronaut.svg" alt="" style="height: 200px;">
-    <img src="./static/flying-astronaut.svg" alt="" style="height: 200px;">
-    <img src="./static/success-astronaut.svg" alt="" style="height: 200px;">
+    <div id="graphics-section">
+        <div id="img-container">
+            <img src="./static/flying-astronaut.svg" alt="Flyling astronaut cartoon">
+        </div>
+        <div>
+            <p>Sign up now to recieve amazing offers!</p>
+        </div>
+    </div>
+
+    <div id="form-section">
+        <h1>Sign up below...</h1>
+        <form action="post" method="">
+            <div id="input-container">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div id="input-container">
+                <label for="surname">Surname</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div id="input-container">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div id="input-container">
+                <label for="phone">Phone number</label>
+                <input type="number" id="phone" name="phone">
+            </div>
+            <div id="input-container">
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required>
+            </div>
+            <div id="input-container">
+                <label for="password-confirmation">Confirm password</label>
+                <input type="text" id="confirm-password" name="confirm-password" required>
+            </div>
+        </form>
+
+        <div>
+            <button type="submit">Create Account</button>
+        </div>
+
+        <div>
+            <p>Already have an account? <a href="">Log in</a> </p>
+        </div>
+    </div>
 </body>
 </html>
