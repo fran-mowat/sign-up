@@ -40,7 +40,15 @@ let checkPhoneValidity = (e) => {
 }
 
 let checkPasswordValidity = (e) => {
-    let input = e.target; 
+    let input;
+
+    if (e == undefined){
+        input = document.getElementById("confirm-password");
+    } else {
+        input = document.getElementById("password"); 
+    }
+
+    console.log(input);
     let errorMessage = input.nextElementSibling;
 
     if (input.value.length < 8) {
@@ -58,6 +66,22 @@ let checkPasswordValidity = (e) => {
     }
 }
 
+let checkPasswordConfirmationValidity = () => {
+    let passwordMatch = document.getElementById("confirm-password");
+    let password = document.getElementById("password");
+
+    password.addEventListener("keyup", checkPasswordConfirmationValidity);
+
+    let errorMessage = passwordMatch.nextElementSibling;
+
+    if (passwordMatch.value == password.value){
+        checkPasswordValidity();
+    } else {
+        errorMessage.textContent = "Passwords entered do not match.";
+        passwordMatch.style.border = "1px solid #ff3f3f";
+    }
+}
+
 let firstName = document.getElementById("name");
 firstName.addEventListener("keyup", checkInputValidity);
 
@@ -72,3 +96,6 @@ phone.addEventListener("keyup", checkPhoneValidity);
 
 let password = document.getElementById("password");
 password.addEventListener("keyup", checkPasswordValidity);
+
+let passwordConfirmation = document.getElementById("confirm-password");
+passwordConfirmation.addEventListener("keyup", checkPasswordConfirmationValidity);
