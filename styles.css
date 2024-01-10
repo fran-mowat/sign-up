@@ -73,36 +73,36 @@ body #graphics-section, body #form-section{
     margin: auto;
 }
 
-#form-section form #input-container{
+#form-section form .input-container{
     padding: 5px 20px;
 }
 
-#form-section form #input-container label{
+#form-section form .input-container label{
     font-size: 10px;
     text-transform: uppercase;
 }
 
-#form-section form #input-container input{
+#form-section form .input-container input{
     display: block;
     width: 200px;
     border-radius: 5px;
     border: 1px solid #E5E7EB;
 }
 
-#form-section form #input-container input:invalid{
+#form-section form .input-container input:invalid{
     border: 1px solid red;
 }
 
-#form-section form #input-container input:focus{
+#form-section form .input-container input:focus{
     border: 1px solid var(--blue);
     outline: none;
 }
 
-#form-section form #input-container .error-message{
+#form-section form .input-container .error-message{
     font-size: 10px;
 }
 
-#form-section form #input-container input:invalid+.error-message{
+#form-section form .input-container input:invalid+.error-message{
     color: red;
 }
 
@@ -111,7 +111,7 @@ body #graphics-section, body #form-section{
     background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
     background-size: 200%;
     background-position: right;
-    transition: background-position 1s, color 1s;
+    transition: background-position 0.7s, color 0.7s;
     margin: 25px;
     border-radius: 5px;
     border: solid var(--blue);
