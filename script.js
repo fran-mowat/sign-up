@@ -58,8 +58,6 @@ let checkPasswordValidity = (e) => {
         input.style.border = "1px solid #ff3f3f";
     } else if (! input.checkValidity()){
         errorMessage.textContent = "Please enter a valid password.";
-        console.log(input.checkValidity())
-        console.log(input)
         input.style.border = "1px solid #ff3f3f";
     } else {
         errorMessage.textContent = "";
