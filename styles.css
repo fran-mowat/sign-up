@@ -84,6 +84,25 @@ body #graphics-section, body #form-section{
 #form-section form #input-container input{
     display: block;
     width: 200px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+}
+
+#form-section form #input-container input:invalid{
+    border: 1px solid red;
+}
+
+#form-section form #input-container input:focus{
+    border: 1px solid var(--blue);
+    outline: none;
+}
+
+#form-section form #input-container .error-message{
+    font-size: 10px;
+}
+
+#form-section form #input-container input:invalid+.error-message{
+    color: red;
 }
 
 #form-section button{
