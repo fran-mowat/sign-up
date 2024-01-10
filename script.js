@@ -23,6 +23,22 @@ let checkInputValidity = (e) => {
     }
 }
 
+let checkPhoneValidity = (e) => {
+    let input = e.target; 
+    let errorMessage = input.nextElementSibling;
+
+    if (input.value.length == 0) {
+        errorMessage.textContent = "* This field is required.";
+        input.style.border = "1px solid #ff3f3f";
+    } else if (! input.checkValidity()){
+        errorMessage.textContent = "Please enter a valid phone number.";
+        input.style.border = "1px solid #ff3f3f";
+    } else {
+        errorMessage.textContent = "";
+        input.style.border = "1px solid #E5E7EB";
+    }
+}
+
 let firstName = document.getElementById("name");
 firstName.addEventListener("keyup", checkInputValidity);
 
@@ -31,3 +47,6 @@ surname.addEventListener("keyup", checkInputValidity);
 
 let email = document.getElementById("email");
 email.addEventListener("keyup", checkInputValidity);
+
+let phone = document.getElementById("phone");
+phone.addEventListener("keyup", checkPhoneValidity);
