@@ -2,6 +2,11 @@
     font-family: "Heebo-Regular", "Ubuntu", "monospace";
 }
 
+:root{
+    --blue: #22A7F0;
+    --dark: #1D2228;
+}
+
 @font-face {
     font-family: "Heebo-Regular";
     src: url("./static/Heebo-Regular.ttf");
@@ -15,4 +20,62 @@
 @font-face {
     font-family: "Ubuntu";
     src: url("./static/Ubuntu-Regular.ttf");
+}
+
+body{
+    display: grid;
+    column-gap: 0px;
+    grid-template-columns: 30vw 70vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+body #graphics-section, body #form-section{
+    padding: 30px;
+}
+
+#graphics-section{
+    background-color: var(--blue);
+}
+
+#graphics-section #img-container{
+    text-align: center;
+    padding: 30px 10px 10px;
+}
+
+#graphics-section #img-container img{
+    height: 400px;
+}
+
+#graphics-section div p{
+    text-align: center;
+    font-size: 25px;
+}
+
+#form-section{
+    background-color: var(--dark);
+}
+
+#form-section h1{
+    text-align: center;
+}
+
+#form-section form{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 20px;
+}
+
+#form-section form #input-container{
+    padding: 5px 20px;
+}
+
+#form-section form #input-container label{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+#form-section form #input-container input{
+    display: block;
 }
