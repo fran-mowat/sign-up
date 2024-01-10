@@ -98,3 +98,6 @@ password.addEventListener("keyup", checkPasswordValidity);
 
 let passwordConfirmation = document.getElementById("confirm-password");
 passwordConfirmation.addEventListener("keyup", checkPasswordConfirmationValidity);
+
+//let submitButton = document.querySelector("button");
+//submitButton.addEventListener("click", validateAllData);
