@@ -27,35 +27,50 @@
 /* INDEX.HTML STYLES */
 
 #index-body{
-    display: grid;
-    column-gap: 0px;
-    grid-template-columns: 30vw 70vw;
     height: 100vh;
-    overflow: hidden;
     margin: 0;
+}
+
+@media screen and (min-width: 768px){
+    #index-body{
+        overflow: hidden;
+    }
+}
+
+#graphics-section{
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    #index-body{
+        display: grid;
+        column-gap: 0px;
+        grid-template-columns: 30vw 70vw;
+    }
+
+    #graphics-section{
+        display: block;
+        background-color: var(--blue);
+    }
+    
+    #graphics-section #img-container{
+        text-align: center;
+        padding: 30px 10px 10px;
+    }
+    
+    #graphics-section #img-container img{
+        height: 400px;
+    }
+    
+    #graphics-section div p{
+        text-align: center;
+        font-size: 25px;
+        color: var(--dark);
+    }
 }
 
 #index-body #graphics-section, #index-body #form-section{
     padding: 30px;
-}
-
-#graphics-section{
-    background-color: var(--blue);
-}
-
-#graphics-section #img-container{
-    text-align: center;
-    padding: 30px 10px 10px;
-}
-
-#graphics-section #img-container img{
-    height: 400px;
-}
-
-#graphics-section div p{
-    text-align: center;
-    font-size: 25px;
-    color: var(--dark);
 }
 
 #form-section{
@@ -70,10 +85,18 @@
 
 #form-section form{
     display: grid;
-    grid-template-columns: 50% 50%;
-    row-gap: 20px;
-    width: 650px;
+    grid-template-columns: auto;
+    width: max-content;
     margin: auto;
+}
+
+@media screen and (min-width: 768px){
+    #form-section form{
+        grid-template-columns: 50% 50%;
+        row-gap: 20px;
+        width: 650px;
+        margin: auto;
+    }
 }
 
 #form-section form .input-container{
@@ -90,6 +113,18 @@
     width: 250px;
     border-radius: 5px;
     border: 1px solid #E5E7EB;
+}
+
+@media screen and (min-width: 600px){
+    #form-section form .input-container input{
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #form-section form .input-container input{
+        width: 250px;
+    }
 }
 
 #form-section form .input-container input:focus{
